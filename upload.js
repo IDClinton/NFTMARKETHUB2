@@ -171,7 +171,7 @@ app.get("/payment2.html", function(req,res){
     res.render("payment2",{numberOfPosts: numberOfPosts})
 })
 
-app.get("/login/login.html", checkNotAuthenticated, function (req, res){
+app.get("/login", checkNotAuthenticated, function (req, res){
     res.render("login");
 })
 
