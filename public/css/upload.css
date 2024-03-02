@@ -92,15 +92,6 @@ body {
 }
 
 
-body{
-    align-items: center;
-    min-height: 100vh; 
-    background-image: url("/img/photo-1651221436727-28b9c922db97.avif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover ;
-}
 
 .container{
     background: #222;
