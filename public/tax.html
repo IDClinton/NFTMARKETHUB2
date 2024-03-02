@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <style>
+        /* CSS for modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4);
+             
+        }
+         .modal-content {
+            left: 30%;
+            top: -10%;
+            position: absolute;
+            background-color: #2E8BC0;
+            margin: 15% auto;
+            padding: 20px;
+            border: 5px solid #888;
+            width: 40%;
+            border-radius: 5%;
+           
+        } 
+        /* CSS for close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+    <body>
+    <!-- Modal -->
+     <div id="myModal" class="modal">
+    
+        <div class="modal-content">
+            <div class="ims">
+                <img class="logo" id="lg1" src="img/th.jfif" alt="">
+                <img class="logo" src="images/WhatsApp Image 2024-02-24 at 3.46.02 AM (1).jpeg" alt="">
+                <img class="logo" src="images/WhatsApp Image 2024-02-24 at 3.46.02 AM (2).jpeg" alt="">
+                <img class="logo" src="images/WhatsApp Image 2024-02-24 at 3.46.02 AM (3).jpeg" alt="">
+                <img class="logo" src="images/WhatsApp Image 2024-02-24 at 3.46.02 AM (4).jpeg" alt="">
+                <img class="logo" src="images/WhatsApp Image 2024-02-24 at 3.46.03 AM (1).jpeg" alt="">
+                <img class="logo" id="lg7" src="images/WhatsApp Image 2024-02-24 at 3.46.02 AM.jpeg" alt="">
+    
+            </div>
+          
+    
+            <p>Earnings derived from this NFT platform are subject to the tax legislation prevailing within the municipal jurisdictions of individuals' origin. It is imperative to adhere to the tax laws applicable to your jurisdiction to ensure compliance and avoid potential legal ramifications.</p>
+            <button class="close">&times;</button>
+            <h1></h1> 
+           
+              <!-- <div class="g-recaptcha" data-sitekey="6Ld-StwfAAAAAImaYjcRYG1o0WmV78_L8sAXId8i"></div> -->
+              
+              <!-- <input id="submit" type="submit" value="submit">  -->
+             
+              </div>
+            </form>
+          </div>
+        </div>
+    
+      
+    </div> 
+    
+    <!-- JavaScript to display modal -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+    
+        // Get the close button
+        var span = document.getElementsByClassName("close")[0];
+    
+        var submit = document.getElementById("submit");
+    
+    
+        // When the page loads, display the modal
+        window.onload = function() {
+            modal.style.display = "block";
+        };
+    
+        // When the user clicks on the close button, close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+    
+        submit.onclick = function() {
+            modal.style.display = "none";
+        };
+    
+    
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
+

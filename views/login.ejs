@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OpenSea, the largest NFT marketplace</title>
+     <link rel="icon" href="favicon.png">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="center">
+      <% if(messages.error){ %>
+        <div class="alert alert-danger">
+          <strong><%= messages.error %></strong>
+        </div>
+
+        <% } %>
+      <h1>Login</h1>
+      <form method="POST" action="/login">
+        <div class="txt_field">
+          <input type="email" name="email" required>
+          <span></span>
+          <label>Email</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" name="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <!-- <div class="g-recaptcha" data-sitekey="6Ld-StwfAAAAAImaYjcRYG1o0WmV78_L8sAXId8i"></div> -->
+        <br><div class="pass">Forgot Password?</div></br>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+          Not a member? <a href="signup.html">Signup</a>
+        </div>
+      </form>
+    </div>
+  </body>
+  
+</html>

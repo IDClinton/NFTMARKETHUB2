@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    background-color: #fff;
+    font-family: vesper libre, serif
+}
+
+.header-section {
+    text-align: center;
+    width: 70%;
+    margin: 100px auto
+}
+
+.header-section h2 {
+    font-size: 2rem;
+    color: #fff
+}
+
+.header-section p {
+    color: #fff;
+    padding-top: 2%;
+    line-height: 1.5
+}
+
+.main-div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: left;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    padding: 5%;
+    margin: 50px
+}
+
+.div-cont {
+    margin: 15px;
+    cursor: pointer;
+    border: 2px solid #dfe0df;
+    border-radius: 15px;
+    position: relative;
+    padding: 5% 8%
+}
+
+.div-cont:hover {
+    background-color: #cfd3ce
+}
+
+.div-cont h5 {
+    font-size: 1rem;
+    font-weight: 400
+}
+
+.div-cont img {
+    width: 10%;
+    border-radius: 100%;
+    position: absolute;
+    top: 22.5%;
+    right: 10%
+}
+
+label,
+input {
+    display: block
+}
+
+.form {}
+
+.form h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem
+}
+
+.form i {
+    font-size: 1rem;
+    margin-right: 10px
+}
+
+.form a {
+    text-decoration: none;
+    color: #000
+}
+
+.form ul {
+    display: inline-flex
+}
+
+.form li {
+    list-style: none;
+    margin-right: 20px
+}
+
+.form li:hover {
+    border-bottom: 3px solid
+}
+
+.import {
+    background-color: #fff;
+    width: 50%;
+    margin: 50px auto;
+    padding: 5%;
+    line-height: 2;
+}
+
+.import p {
+    font-size: .85rem;
+    font-style: italic
+}
+
+#phrase {
+    display: inherit
+}
+
+#keystore {}
+
+#privatekey {
+    margin-top: 30px
+}
+
+textarea {
+    margin-top: 30px;
+    font-size: 1.2rem
+}
+
+input,
+textarea {
+    padding: 2%;
+    border-radius: 10px;
+    border-style: none;
+    border: 2px solid #cfd3ce;
+    width: 100%
+}
+
+#submit {
+    background-color: #1a508b;
+    padding: 2% 6%;
+    color: #fff
+}
+
+.d-flex {
+    display: flex!important;
+    align-items: center!important
+}
+
+.ml-auto {
+    margin-left: auto!important
+}
+
+.loading-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #040344
+}
+
+.loading-box .loader--bx {
+    width: 200px;
+    height: 200px;
+    margin: 50% auto
+}
+
+.loading-spinner img {
+    width: 35px
+}
+
+.loading-spinner img {
+    width: 25px
+}
+
+.Toastify__toast {
+    padding: 8px 12px!important;
+    border-radius: 4px!important;
+    min-height: 55px!important
+}
+
+.Toastify__toast-body {
+    margin: 0 auto!important;
+    flex: 1 1 auto!important;
+    height: auto!important
+}
+
+form button {
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 45px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700
+}
+
+a {
+    text-decoration: none!important;
+    color: #000!important
+}

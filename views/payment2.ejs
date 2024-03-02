@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="css/payment.css">
+    
+      
+    
+        <script nonce="eMGLD+l4tALtBP0Lz2eiVA==">
+    //<![CDATA[
+          //function to fix height of iframe!
+          var calcHeight = function() {
+            var headerDimensions = $('.preview__header').height();
+            $('.full-screen-preview__frame').height($(window).height() - headerDimensions);
+          }
+    
+          $(document).ready(function() {
+            calcHeight();
+          });
+    
+          $(window).resize(function() {
+            calcHeight();
+          }).load(function() {
+            calcHeight();
+          });
+    
+    //]]>
+    </script>
+        
+      <style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin,.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing{display:block;display:initial;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:none;}</style></head>
+<body>
+    <!-- <a href="https://boxcoin.dev">
+        <img class="logo" src="img/logo-2.png" alt="logo">
+    </a> -->
+    <hr class="space">
+    <div data-boxcoin="custom-1" data-price="2.00" data-currency="usd" data-title="Checkout Demo" data-description="To make a purchase, select the card payment method and enter the card number *4242424242424242*. Use any random expiration date and security code." data-type="inline"><!-- Boxcoin - https://boxcoin.dev -->    <div class="bxc-main bxc-start bxc-inline bxc-pay-cnt-active" data-checkout-id="custom-1" data-currency="usd" data-price="2" data-external-reference="" data-title="Checkout Demo" data-note="" data-redirect="" data-start-price="2" data-active="btc" data-transaction-id="45127">
+             
+        <div class="bxc-pay-cnt bxc-box">
+            <div class="bxc-top">
+                <div class="bxc-pay-top-main">
+                    <div class="bxc-title">
+                        Send payment                        <div class="bxc-flex">
+                        
+                            <div class="bxc-btn bxc-btn-border bxc-back"> 
+                                <a href="/page">Back</a></div>
+                        </div>
+                    </div>
+                    <div class="bxc-text"></div>                </div>
+                <div class="bxc-pay-top-back">
+                    <div class="bxc-title">
+                        Are you sure?                    </div>
+                    <div class="bxc-text">
+                        This transaction will be cancelled. If you already sent the payment please wait.                    </div>
+                    <div id="bxc-confirm-cancel" class="bxc-btn bxc-btn-border bxc-btn-red">
+                        Yes, I'm sure                    </div>
+                    <div id="bxc-abort-cancel" class="bxc-btn bxc-btn-border bxc-back">
+                        Cancel                    </div>
+                </div>
+            </div>
+            <div class="bxc-body">
+                <div class="bxc-flex">
+                    <img class="bxc-qrcode" src="images/qr.svg">                    <div class="bxc-flex bxc-qrcode-text">
+                        <img src="img/ethereum-eth-logo.png" alt="">
+                        <div class="bxc-text">Only send BTC to this address</div>
+                    </div>
+                </div>
+                <div class="bxc-flex bxc-pay-address">
+                    <div>
+                        <div class="bxc-text">Ethereum address</div>
+                        <div id="copyDiv" class="bxc-title">0xd72346dd4eabb484581ea0605fe287672e429a35</div>
+                    </div>
+                    <i onclick="copyElementToClipboard()" class="bx bx-copy" data-text="YmMxcWdmcDk1dmh5MGh6cDc5eXd3YXRuN3E4Y3UzcnRuOTI5djJ0ejBn">
+                        <span  class="bxc-toolip"> Copy to clipboard</span>
+                    </i>
+                </div>
+                <div class="bxc-flex bxc-pay-amount">
+                    <div>
+                        <div class="bxc-text">
+                             Mint Price                        </div>
+                        <div class="bxc-title">$<%= numberOfPosts *299 %>
+                            <p>
+                                Amount's worth <div>$</div><div id="displaySum"></div> 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bxc-flex">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <style>
+        a{
+            text-decoration: none;
+        }
+
+        #btt{
+         left: 90vh;
+        top: 10vh;
+        }
+    </style>
+
+    
+  <script>
+    function copyElementToClipboard() {
+      var copyDiv = document.getElementById("copyDiv");
+      var range = document.createRange();
+      range.selectNode(copyDiv);
+      window.getSelection().removeAllRanges(); // Clear previous selections
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges(); // Clear the range selection
+      alert("Element copied to clipboard!");
+    }
+  </script>
+
+<script>
+  // Retrieve the sum from localStorage
+  var sum = localStorage.getItem('sum');
+
+// Parse the sum as an integer
+sum = parseInt(sum);
+
+// Check if parsing was successful
+if (!isNaN(sum)) {
+    // Display the sum on the page
+    document.getElementById('displaySum').innerText = sum;
+} else {
+    console.error('Failed to retrieve or parse the sum from localStorage.');
+}
+</script>
+
+    
+         
+</body>
+</html>

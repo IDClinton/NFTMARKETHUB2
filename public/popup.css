@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+
+
+p{
+    text-align: justify;
+}
+
+.btnnn{
+
+    padding: 10px 40px;
+    background: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 450px;
+    border-radius: 30px;
+    margin-left: 100px;
+
+}
+
+.close{
+    margin-left: 450px;
+    /* margin-bottom: 30px; */
+    margin-top: 0;
+    
+
+}
+
+.modal-content p{
+    font-weight: 450px;
+    color: black;
+    align-items: center;
+}
+
+.txtt{
+    border-radius: 5px;
+}
+
+.ims{
+    float: left;
+   align-items: center;
+}
+
+.logo{
+   width: 50px;
+   height: 40px;
+   border-radius: 50%;
+   margin-bottom: 20px;
+   float: left;
+   margin-left: 2px;
+   
+}
+
+#lg1{
+    margin-left: 80px;
+}
+
+#lg7{
+    margin-right: 100px;
+}
