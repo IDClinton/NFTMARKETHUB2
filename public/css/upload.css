@@ -194,3 +194,10 @@ body{
     background: #1E90FF;
     letter-spacing: .1rem;
 } */
+
+@media (max-width:480px){
+    .container{
+        width: 800px;
+        height: 300px;
+    }
+}
