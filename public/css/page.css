@@ -370,7 +370,7 @@ img:hover{
 
 @media (max-width:480px){
     .box{
-        top: 100vh;
+        top: 115vh;
         left: 15vh;
     }
     .image img{
