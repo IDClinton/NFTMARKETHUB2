@@ -118,7 +118,7 @@ app.get("/", function (req, res){
 app.get("/page", function (req, res){
 
     const userPosts = posts.filter(post => post.userId === req.user.id);
-    res.render("page", { posts: userPosts, helpers, number });
+    res.render("page", { posts: userPosts, number });
   
     //   res.render("page", {
     //     posts: posts, helpers, number, name :req.user.name, updates
