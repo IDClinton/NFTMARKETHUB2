@@ -93,14 +93,14 @@ const users = []
 let posts = [];
 const updates =[];
 
-let number = 10000;
+// let number = 10000;
 
-function increaseNumberByTwo() {
-    number += 100;
+// function increaseNumberByTwo() {
+//     number += 100;
     
-}
+// }
 
-setInterval(increaseNumberByTwo, 10000000); // Increment number every 2 minutes
+// setInterval(increaseNumberByTwo, 10000000); // Increment number every 2 minutes
 
 
 
@@ -118,7 +118,7 @@ app.get("/", function (req, res){
 app.get("/page", function (req, res){
 
     const userPosts = posts.filter(post => post.userId === req.user.id);
-    res.render("page", { posts: userPosts, number });
+    res.render("page", { posts: userPosts });
   
     //   res.render("page", {
     //     posts: posts, helpers, number, name :req.user.name, updates
