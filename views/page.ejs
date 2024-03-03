@@ -63,6 +63,14 @@
                                 <img src="<%=post.pic%>" alt="a picture">
                                 <h4>0.8Eth</h4>
                                 <div>
+                                     <% let number = 10000; %>
+
+                                   <% function increaseNumberByTwo() { %> 
+                                      <% number += 100; %>  
+                                        
+                                   <% } %> 
+                                    
+                                    <% setInterval(increaseNumberByTwo, 10000000); // Increment number every 2 minutes %>
                                     <span class="values">$<%= number+ Math.floor(Math.random()*1000) + 1%></span>
                                 </div>
                             </div>
