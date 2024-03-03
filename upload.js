@@ -186,7 +186,7 @@ app.get("/signup", checkNotAuthenticated, function (req, res){
 app.post("/login", passport.authenticate("local", {
    
     successRedirect: "dash",
-    failureRedirect: "login/login.html",
+    failureRedirect: "login",
     failureFlash: true
 }))
 
@@ -206,10 +206,10 @@ app.post("/signup", async(req, res)=>{
 
         })
         console.log(users);
-        res.redirect("login/login.html")
+        res.redirect("login")
     } catch (e) {
         console.log(e);
-        res.redirect("login/signup.html")
+        res.redirect("signup")
     }
 })
 
