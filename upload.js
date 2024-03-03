@@ -175,7 +175,7 @@ app.get("/login", checkNotAuthenticated, function (req, res){
     res.render("login");
 })
 
-app.get("/login/signup.html", checkNotAuthenticated, function (req, res){
+app.get("/signup", checkNotAuthenticated, function (req, res){
     res.render("signup");
 })
 
