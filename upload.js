@@ -127,7 +127,7 @@ app.get("/page", function (req, res){
     
 })
 
-app.get("/upload", checkAuthenticated, function (req, res){
+app.get("/upload", function (req, res){
 
     const user = req.user;
  
