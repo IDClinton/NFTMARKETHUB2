@@ -115,7 +115,7 @@ app.get("/", function (req, res){
     
 });
 
-app.get("/page", checkAuthenticated, function (req, res){
+app.get("/page", function (req, res){
 
     const userPosts = posts.filter(post => post.userId === req.user.id);
     res.render("page", { posts: userPosts, helpers, number });
