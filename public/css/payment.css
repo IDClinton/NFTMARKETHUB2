@@ -1356,7 +1356,8 @@ body.bxc-loading>div {
 .bxc-pay-cnt {
     display: none;
     animation: bxc-fade-in .5s;
-    
+        border: 5px solid;
+
     left: 50vh;
 }
 
