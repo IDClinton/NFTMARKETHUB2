@@ -4,7 +4,7 @@
   "description": "nnn",
   "main": "upload.js",
   "scripts": {
-    "start": "upload.js"
+    "start": "nodemon upload.js"
   },
   "author": "clinton",
   "license": "ISC",
