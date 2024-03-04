@@ -25,12 +25,12 @@ initializePassport(
 
 const app = express();
 
-
+// secretidhere
 
 app.use(express.urlencoded({extended: false}));
 app.use(flash())
 app.use(session({
-    secret: "secretidhere",
+    secret: "secret",  
     resave: false, 
     saveUninitialized: false
 }))
