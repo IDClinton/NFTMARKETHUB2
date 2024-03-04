@@ -214,43 +214,8 @@ app.post("/signup", async(req, res)=>{
 })
 
 
-app.post("/connect", function(req, res){
-    // Route to handle form submission
-    const mail = req.body.mail;
-
-    // Create a nodemailer transporter
-    let transporter = nodemailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            // type: "OAuth2",
-            user: 'idclinton00@gmail.com', // Your Gmail email address
-            pass: 'October2002$$', // Your Gmail password
-            // clientId: process.env.OAUTH_CLIENTID,
-            // clientSecret: process.env.OAUTH_CLIENT_SECRET,
-            // refreshToken: process.env.OAUTH_REFRESH_TOKEN,
-
-        }
-    });
-
-    // Email message options
-    let mailOptions = {
-        from: 'idclinton00@gmail.com', // Sender address
-        to: 'idemudiaclinton44@gmail.com', // List of recipients
-        subject: 'New Message from NFTMARKETHUNB', // Subject line
-        text: ' Name: ${name}\nEmail: ${mail}\nMessage: ${message}' // Plain text body
-    };
-
-    // Send email
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log('Error occurred:', error);
-            res.status(500).send('Error sending email');
-        } else {
-            console.log('Email sent:', info.response);
-          
-        }
-    });
-    res.redirect("tax.html")
+app.post("/connect", function(req, 
+    res.redirect("/tax.html")
 })
 
 app.post("/upload",upload.single("image"), function(req, res){
