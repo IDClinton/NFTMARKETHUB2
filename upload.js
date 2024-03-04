@@ -214,7 +214,7 @@ app.post("/signup", async(req, res)=>{
 })
 
 
-app.post("/connect", function(req, 
+app.post("/connect", function(req,res){
     res.redirect("/tax.html")
 })
 
