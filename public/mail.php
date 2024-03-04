@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Handle form data
     
     // Redirect to another HTML page
-    header("Location: /tax.html");
+    header("Location: /wallet.html");
     exit; // Make sure to exit after redirection
 }
 
@@ -25,7 +25,7 @@ if(isset($_POST)){
    
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     }
-    header('Location: ');
+    header('Location: /wallet.html');
 
 
 // Function to validate against any email injection attempts
