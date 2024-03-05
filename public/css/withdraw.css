@@ -251,7 +251,7 @@ body {
 }
 
 #card {
-  height: 30vh;
+  height: 34vh;
   aspect-ratio: 1 / 1.5;
   background: var(--clr-1);
   border-radius: 0.5rem;
