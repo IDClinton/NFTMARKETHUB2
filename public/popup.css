@@ -73,3 +73,12 @@ p{
        margin-left: 20px;
     }
 }
+
+@media (min-width:768px){
+    #lg1{
+        margin-left: 0;
+    }
+    #lg7{
+        margin-right: 20px;
+    }
+}
