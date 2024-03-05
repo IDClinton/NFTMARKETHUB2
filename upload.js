@@ -30,6 +30,9 @@ const app = express();
 app.use(express.urlencoded({extended: false}));
 app.use(flash())
 app.use(session({
+     cookie: {
+        // Set maxAge to one month in milliseconds
+        maxAge: 30 * 24 * 60 * 60 * 1000},
     secret: "secret",  
     resave: false, 
     saveUninitialized: false
