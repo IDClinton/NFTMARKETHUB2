@@ -68,7 +68,7 @@ app.use(flash())
 connectRedis().then(() => {
     app.use(session({
         store: new RedisStore({ client: redisClient }),
-        secret: 'your_session_secret',
+        secret: 'ghdgdgdjsdhd',
         resave: false,
         saveUninitialized: false
     }));
