@@ -26,7 +26,7 @@ initializePassport(
     
 )
 
-const app = express();
+
 
 const { createClient } = require('redis');
 
@@ -45,20 +45,34 @@ if(!redisClient.connected){
 }
 
 
+const app = express();
+const connectRedis = () => {
+    return new Promise((resolve, reject) => {
+        redisClient.on('connect', () => {
+            console.log('Connected to Redis server');
+            resolve();
+        });
+        redisClient.on('error', (err) => {
+            console.error('Error connecting to Redis:', err);
+            reject(err);
+        });
+    });
+};
+
+
 // secretidhere
 
 app.use(cookieParser());
 app.use(express.urlencoded({extended: false}));
 app.use(flash())
-app.use(session({
-     store: new RedisStore({ client: redisClient }),
-     cookie: {
-        // Set maxAge to one month in milliseconds
-        maxAge: 30 * 24 * 60 * 60 * 1000},
-    secret: "secret",  
-    resave: false, 
-    saveUninitialized: false
-}))
+connectRedis().then(() => {
+    app.use(session({
+        store: new RedisStore({ client: redisClient }),
+        secret: 'your_session_secret',
+        resave: false,
+        saveUninitialized: false
+    }));
+})
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
