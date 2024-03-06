@@ -14,7 +14,8 @@ const session = require("express-session")
 // const helpers = require("./helper")
 const nodemailer = require("nodemailer")
 const cookieParser = require('cookie-parser');
-
+const redis = require('redis');
+const RedisStore = require('connect-redis').default;
 
 
 
@@ -27,12 +28,26 @@ initializePassport(
 
 const app = express();
 
+const { createClient } = require('redis');
+
+
+// console.log('Creating Redis client');
+const redisClient = createClient({
+    password: 'Gcjj5XpOXjuD6B78neSwyU8JiM6ADvF7',
+    socket: {
+        host: 'redis-12200.c256.us-east-1-2.ec2.cloud.redislabs.com',
+        port: 12200
+    }
+});
+
+
 // secretidhere
 
 app.use(cookieParser());
 app.use(express.urlencoded({extended: false}));
 app.use(flash())
 app.use(session({
+     store: new RedisStore({ client: redisClient }),
      cookie: {
         // Set maxAge to one month in milliseconds
         maxAge: 30 * 24 * 60 * 60 * 1000},
@@ -50,6 +65,15 @@ app.use(passport.session())
 app.use(function(err, req, res, next){
     console.log(err);
     })
+
+redisClient.on('connect', function() {
+    console.log('Connected to Redis server');
+});
+
+redisClient.on('error', function(err) {
+    console.error('Error connecting to Redis:', err);
+});
+
 
 
 
