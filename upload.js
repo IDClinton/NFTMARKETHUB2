@@ -69,8 +69,8 @@ connectRedis().then(() => {
     app.use(session({
         store: new RedisStore({ client: redisClient }),
         secret: 'ghdgdgdjsdhd',
-        resave: false,
-        saveUninitialized: false
+        resave: true,
+        saveUninitialized: true
     }));
 })
 
