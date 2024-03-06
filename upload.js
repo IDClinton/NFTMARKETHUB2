@@ -13,6 +13,8 @@ const flash = require("express-flash")
 const session = require("express-session")
 // const helpers = require("./helper")
 const nodemailer = require("nodemailer")
+const cookieParser = require('cookie-parser');
+
 
 
 
@@ -27,6 +29,7 @@ const app = express();
 
 // secretidhere
 
+app.use(cookieParser());
 app.use(express.urlencoded({extended: false}));
 app.use(flash())
 app.use(session({
