@@ -15,7 +15,7 @@ const session = require("express-session")
 const nodemailer = require("nodemailer")
 const cookieParser = require('cookie-parser');
 const redis = require('redis');
-const RedisStore = require('connect-redis')(session);
+const RedisStore = require('connect-redis').default;
 
 
 
