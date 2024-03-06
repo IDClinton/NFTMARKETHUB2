@@ -40,6 +40,10 @@ const redisClient = createClient({
     }
 });
 
+if(!redisClient.connected){
+    console.log('Redis Connecting')
+}
+
 
 // secretidhere
 
@@ -74,6 +78,9 @@ redisClient.on('error', function(err) {
     console.error('Error connecting to Redis:', err);
 });
 
+redisClient.on('end', function(err) {
+    console.log('Redis Closed');
+});
 
 
 
