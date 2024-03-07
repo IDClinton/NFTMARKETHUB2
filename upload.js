@@ -68,14 +68,14 @@ const connectRedis = () => {
 app.use(cookieParser());
 app.use(express.urlencoded({extended: false}));
 app.use(flash())
-connectRedis().then(() => {
+
     app.use(session({
         store: new RedisStore({ client: redisClient }),
         secret: 'ghdgdgdjsdhd',
         resave: true,
         saveUninitialized: true
     }));
-})
+
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
