@@ -40,6 +40,9 @@ const redisClient = createClient({
     }
 });
 
+if(!redisClient.isOpen){
+    redisClient.connect()
+}
 if(!redisClient.connected){
     console.log('Redis Connecting')
 }
