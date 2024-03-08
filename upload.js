@@ -153,7 +153,7 @@ const updates =[];
                                      let number = 10000;
 
                                    function increaseNumberByTwo() {  
-                                       number += 100; 
+                                       number += 50; 
                                         
                                     } 
                                     
