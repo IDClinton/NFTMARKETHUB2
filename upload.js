@@ -72,8 +72,8 @@ app.use(flash())
     app.use(session({
         store: new RedisStore({ client: redisClient }),
         secret: 'ghdgdgdjsdhd',
-        resave: true,
-        saveUninitialized: true
+        resave: false,
+        saveUninitialized: false
     }));
 
 
