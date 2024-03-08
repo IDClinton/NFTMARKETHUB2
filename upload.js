@@ -106,6 +106,9 @@ const { log } = require("console");
 const { request } = require("http");
 
     let filename = path.basename("/Users/hp/Downloads/opnseas.com/upload/pictures");
+
+
+
     
     
     
@@ -147,6 +150,14 @@ const users = []
 let posts = [];
 const updates =[];
 
+                                     let number = 10000;
+
+                                   function increaseNumberByTwo() {  
+                                       number += 100; 
+                                        
+                                    } 
+                                    
+                                    setInterval(increaseNumberByTwo, 3600000); 
 // let number = 10000;
 
 // function increaseNumberByTwo() {
@@ -172,7 +183,7 @@ app.get("/", function (req, res){
 app.get("/page", function (req, res){
 
     const userPosts = posts.filter(post => post.userId === req.user.id);
-    res.render("page", { posts: userPosts });
+    res.render("page", { posts: userPosts, number });
   
     //   res.render("page", {
     //     posts: posts, helpers, number, name :req.user.name, updates
